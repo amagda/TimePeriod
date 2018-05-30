@@ -11,18 +11,18 @@ Allowes you to obtain:
 
 ## CustomPeriod
 Represents the specific lower and upper boundaries.
-```
+```kotlin
 val lowerBound = System.currentTimeMillis()
 val upperBound = lowerBound + DAY_IN_MLS
 CustomPeriod(lowerBound, upperBound)
 ```
 Or unbounded by lower/upper bounds
-```
+```kotlin
 CustomPeriod(0, upperBound)
 CustomPeriod(lowerBound, 0)
 ```
 Or unbounded by lower and upper bounds at same time
-```
+```kotlin
 CustomPeriod(0, 0)
 CustomPeriod.UNBOUNDED
 ```
@@ -45,7 +45,7 @@ For example:
 - When it's monday of 21may(cross the upper bound of 20may) then bounds would be recalculated, so new current week lower bound is 21may and upper is 27may
  
 **DayPeriod**
-```
+```kotlin
 // current day
 DayPeriod(0)
 
@@ -60,7 +60,7 @@ DayPeriod(1)
 
 Lower bound in range of 1-7(monday-sunday)
 
-```
+```kotlin
 // current week, lower bound is monday
 WeekPeriod(1, 0)	
 
@@ -75,7 +75,7 @@ WeekPeriod(5, 3)
 
 Lower bound in range of 1-31(day of month)
 
-```
+```kotlin
 // current month, lower bound is 1 day of month
 MonthPeriod(1, 0)	
 
@@ -90,7 +90,7 @@ MonthPeriod(31, 1)
 
 Lower bound in range of 1-12(month of year)
 
-```
+```kotlin
 // current year, lower bound is january
 YearPeriod(1, 0) 			
 
