@@ -25,8 +25,10 @@ public abstract class RepeatablePeriod extends BasePeriod {
      * Value depends of the {@link PeriodType}:
      * <ul>
      * <li>For the {@link #DAY_PERIOD} is current day(1)</li>
-     * <li>For the {@link #WEEK_PERIOD} is day of the week in range of 1-7</li>
-     * <li>For the {@link #MONTH_PERIOD} is day of the month in range of 1-31</li>
+     * <li>For the {@link #WEEK_PERIOD} is day of the week in range of 1-7
+     * or {@code 0} if period starts from the current day</li>
+     * <li>For the {@link #MONTH_PERIOD} is day of the month in range of 1-31
+     * or {@code 0} if period starts from the current day</li>
      * <li>For the {@link #YEAR_PERIOD} is month of the year in range of 1-12</li>
      * </ul>
      * </p>

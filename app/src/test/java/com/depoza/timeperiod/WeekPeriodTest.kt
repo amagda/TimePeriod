@@ -30,7 +30,7 @@ class WeekPeriodTest {
     @Test
     fun throwsOnLowerBoundLessThanAllowable() {
         Assertions.assertThrows(IllegalArgumentException::class.java) {
-            WeekPeriod(0, 0)
+            WeekPeriod(-1, 0)
         }
     }
 
@@ -53,6 +53,6 @@ class WeekPeriodTest {
 
     companion object {
         @JvmStatic
-        fun lowerBoundValues() = IntStream.range(1, 8)
+        fun lowerBoundValues() = IntStream.range(0, 8)
     }
 }

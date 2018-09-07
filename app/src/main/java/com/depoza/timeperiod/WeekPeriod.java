@@ -24,15 +24,17 @@ public final class WeekPeriod extends RepeatablePeriod {
 
     /**
      * @param lowerBound day of the week in range of 1-7(Monday-Sunday) from which period could be started
+     *                   or {@code 0} if period starts from the current day
      * @param quantity   total number of the weeks in relation to the current time
      *                   where {@code 0} is current week,
      *                   negative value is previous N weeks,
      *                   positive value is next N weeks
      */
-    public WeekPeriod(@IntRange(from = 1, to = 7) int lowerBound, int quantity) {
+    public WeekPeriod(@IntRange(from = 0, to = 7) int lowerBound, int quantity) {
         super(WEEK_PERIOD, lowerBound, quantity, new WeekTimeBoundsCalculator());
-        if (lowerBound < 1 || lowerBound > 7) {
-            throw new IllegalArgumentException("lowerBound is day of the week, value should be in range of 1-7");
+        if (lowerBound < 0 || lowerBound > 7) {
+            throw new IllegalArgumentException("lowerBound is day of the week, value should be in range of 1-7" +
+                    " or 0 if period starts from the current day");
         }
     }
 
@@ -96,6 +98,10 @@ public final class WeekPeriod extends RepeatablePeriod {
         }
 
         private int calculateDelta(int lowerDayOfWeek, int curDayOfWeek) {
+            boolean isLast7DaysMode = lowerDayOfWeek == 0;
+            if (isLast7DaysMode) {
+                return 0;
+            }
             int result = curDayOfWeek - lowerDayOfWeek;
             if (curDayOfWeek < lowerDayOfWeek) {
                 result += 7;

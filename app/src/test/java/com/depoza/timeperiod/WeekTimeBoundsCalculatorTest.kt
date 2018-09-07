@@ -1,6 +1,7 @@
 package com.depoza.timeperiod
 
 import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS
 import org.junit.jupiter.params.ParameterizedTest
@@ -84,6 +85,16 @@ class WeekTimeBoundsCalculatorTest : BaseTimeBoundsCalculatorTest() {
         PeriodTimeBoundsVerifier(timeBounds)
                 .lowerBound(startDay, startMonth, startYear)
                 .upperBound(endDay, endMonth, endYear)
+                .verify()
+    }
+
+    @Test
+    fun prev7Days() {
+        val period = WeekPeriod(0, -1)
+        val timeBounds = calculator.calculateFor(period)
+        PeriodTimeBoundsVerifier(timeBounds)
+                .lowerBound(29, 3, 2018)
+                .upperBound(4, 4, 2018)
                 .verify()
     }
 }

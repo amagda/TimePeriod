@@ -201,4 +201,55 @@ class MonthTimeBoundsCalculatorTest : BaseTimeBoundsCalculatorTest() {
                 .upperBound(30, 4, 2018)
                 .verify()
     }
+
+    @Test
+    fun prev30Days_Now1Mar() {
+        val cal = Calendar.getInstance().apply {
+            set(DAY_OF_MONTH, 1)
+            set(MONTH, 2)
+            set(YEAR, 2018)
+            set(HOUR_OF_DAY, 13)
+            set(MINUTE, 25)
+            set(SECOND, 50)
+            set(MILLISECOND, 55)
+        }
+        provideTimeOf(cal)
+        val period = MonthPeriod(0, -1)
+        val timeBounds = calculator.calculateFor(period)
+        PeriodTimeBoundsVerifier(timeBounds)
+                .lowerBound(30, 1, 2018)
+                .upperBound(28, 2, 2018)
+                .verify()
+    }
+
+    @Test
+    fun prev30Days_Now5Mar() {
+        provideTimeOf(cal5Mar2018)
+        val period = MonthPeriod(0, -1)
+        val timeBounds = calculator.calculateFor(period)
+        PeriodTimeBoundsVerifier(timeBounds)
+                .lowerBound(3, 2, 2018)
+                .upperBound(4, 3, 2018)
+                .verify()
+    }
+
+    @Test
+    fun prev30Days_Now31Mar() {
+        val cal = Calendar.getInstance().apply {
+            set(DAY_OF_MONTH, 31)
+            set(MONTH, 2)
+            set(YEAR, 2018)
+            set(HOUR_OF_DAY, 13)
+            set(MINUTE, 25)
+            set(SECOND, 50)
+            set(MILLISECOND, 55)
+        }
+        provideTimeOf(cal)
+        val period = MonthPeriod(0, -1)
+        val timeBounds = calculator.calculateFor(period)
+        PeriodTimeBoundsVerifier(timeBounds)
+                .lowerBound(1, 3, 2018)
+                .upperBound(30, 3, 2018)
+                .verify()
+    }
 }
