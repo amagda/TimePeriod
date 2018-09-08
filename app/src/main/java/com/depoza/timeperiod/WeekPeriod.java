@@ -23,6 +23,8 @@ import static java.util.Calendar.SUNDAY;
 public final class WeekPeriod extends RepeatablePeriod {
 
     /**
+     * Initializes week period
+     *
      * @param lowerBound day of the week in range of 1-7(Monday-Sunday) from which period could be started
      *                   or {@code 0} if period starts from the current day
      * @param quantity   total number of the weeks in relation to the current time

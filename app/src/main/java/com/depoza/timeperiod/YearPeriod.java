@@ -23,6 +23,8 @@ import static java.util.Calendar.YEAR;
 public final class YearPeriod extends RepeatablePeriod {
 
     /**
+     * Initializes year period
+     *
      * @param lowerBound month of the year in range of 1-12(January-December) from which period could be started
      * @param quantity   total number of the years in relation to the current time
      *                   where {@code 0} is current year,

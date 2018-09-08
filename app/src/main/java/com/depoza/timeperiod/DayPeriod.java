@@ -19,6 +19,8 @@ import static java.util.Calendar.SECOND;
 public final class DayPeriod extends RepeatablePeriod {
 
     /**
+     * Initializes day period
+     *
      * @param quantity total number of the days in relation to the current time
      *                 where {@code 0} is current day,
      *                 negative value is previous N days,

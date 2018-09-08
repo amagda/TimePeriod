@@ -22,6 +22,8 @@ import static java.util.Calendar.SECOND;
 public final class MonthPeriod extends RepeatablePeriod {
 
     /**
+     * Initializes month period
+     *
      * @param lowerBound day of the month in range of 1-31 from which period could be started
      *                   or {@code 0} if period starts from the current day
      * @param quantity   total number of the months in relation to the current time

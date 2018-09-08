@@ -36,6 +36,12 @@ public interface Period extends Serializable {
      */
     @FunctionalInterface
     interface TimeBoundsCalculator<T extends Period> {
+        /**
+         * Obtains start and end time of period
+         *
+         * @param period to calculate start and end time for
+         * @return array with specific dates in Unix time format, where 1-t value is start time and 2-d is end time
+         */
         long[] calculateFor(T period);
     }
 }

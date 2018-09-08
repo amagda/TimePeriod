@@ -41,6 +41,8 @@ public final class CustomPeriod extends BasePeriod {
     public final long upperBound;
 
     /**
+     * Initializes custom period
+     *
      * @param lowerBound start date of the period in milliseconds Unix time format.
      *                   Could be {@code 0} if period is unbounded by lower boundary
      * @param upperBound end date of the period in milliseconds Unix time format.
