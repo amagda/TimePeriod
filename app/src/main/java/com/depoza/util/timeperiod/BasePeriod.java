@@ -1,4 +1,4 @@
-package com.depoza.timeperiod;
+package com.depoza.util.timeperiod;
 
 import android.support.annotation.StringDef;
 
@@ -13,7 +13,7 @@ import static java.lang.annotation.ElementType.PARAMETER;
  * Period of the time with a common information
  */
 @Immutable
-abstract class BasePeriod implements Period {
+public abstract class BasePeriod implements Period {
 
     public static final String CUSTOM_PERIOD = "custom";
     public static final String DAY_PERIOD = "day";

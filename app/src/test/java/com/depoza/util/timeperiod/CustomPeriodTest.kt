@@ -1,7 +1,7 @@
-package com.depoza.timeperiod
+package com.depoza.util.timeperiod
 
-import com.depoza.timeperiod.BasePeriod.CUSTOM_PERIOD
-import com.depoza.timeperiod.CustomPeriod.UNBOUNDED
+import com.depoza.util.timeperiod.BasePeriod.CUSTOM_PERIOD
+import com.depoza.util.timeperiod.CustomPeriod.UNBOUNDED
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.jupiter.api.Assertions.assertThrows

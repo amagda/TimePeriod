@@ -1,4 +1,4 @@
-package com.depoza.timeperiod
+package com.depoza.util.timeperiod
 
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.TestInstance

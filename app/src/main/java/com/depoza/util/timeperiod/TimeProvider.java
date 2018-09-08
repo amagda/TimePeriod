@@ -1,4 +1,4 @@
-package com.depoza.timeperiod;
+package com.depoza.util.timeperiod;
 
 /**
  * Provider of the current time in milliseconds

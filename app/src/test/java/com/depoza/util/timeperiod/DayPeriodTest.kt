@@ -1,6 +1,6 @@
-package com.depoza.timeperiod
+package com.depoza.util.timeperiod
 
-import com.depoza.timeperiod.BasePeriod.DAY_PERIOD
+import com.depoza.util.timeperiod.BasePeriod.DAY_PERIOD
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.jupiter.api.Assertions.assertEquals

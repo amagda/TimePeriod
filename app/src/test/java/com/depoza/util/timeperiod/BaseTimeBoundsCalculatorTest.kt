@@ -1,4 +1,4 @@
-package com.depoza.timeperiod
+package com.depoza.util.timeperiod
 
 import org.mockito.Mockito.`when`
 import org.mockito.Mockito.mock

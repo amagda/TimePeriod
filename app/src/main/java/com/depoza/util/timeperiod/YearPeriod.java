@@ -1,4 +1,4 @@
-package com.depoza.timeperiod;
+package com.depoza.util.timeperiod;
 
 import android.support.annotation.IntRange;
 import android.support.annotation.VisibleForTesting;

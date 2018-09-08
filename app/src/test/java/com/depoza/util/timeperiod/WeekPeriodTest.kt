@@ -1,6 +1,6 @@
-package com.depoza.timeperiod
+package com.depoza.util.timeperiod
 
-import com.depoza.timeperiod.BasePeriod.MONTH_PERIOD
+import com.depoza.util.timeperiod.BasePeriod.WEEK_PERIOD
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.jupiter.api.Assertions
@@ -10,34 +10,34 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.MethodSource
 import java.util.stream.IntStream
 
-class MonthPeriodTest {
+class WeekPeriodTest {
 
-    private val curPeriod = MonthPeriod(1, 0)
-    private val previousPeriod = MonthPeriod(1, -1)
-    private val nextPeriod = MonthPeriod(1, 1)
+    private val curPeriod = WeekPeriod(1, 0)
+    private val previousPeriod = WeekPeriod(1, -1)
+    private val nextPeriod = WeekPeriod(1, 1)
 
     @Test
-    fun shouldBeOfMonthType() {
-        assertThat(curPeriod.type, `is`(MONTH_PERIOD))
+    fun shouldBeOfWeekType() {
+        assertThat(curPeriod.type, `is`(WEEK_PERIOD))
     }
 
     @ParameterizedTest
     @MethodSource("lowerBoundValues")
     fun constructsWithAllowedLowerBounds(lowerBound: Int) {
-        MonthPeriod(lowerBound, 0)
+        WeekPeriod(lowerBound, 0)
     }
 
     @Test
     fun throwsOnLowerBoundLessThanAllowable() {
         Assertions.assertThrows(IllegalArgumentException::class.java) {
-            MonthPeriod(-1, 0)
+            WeekPeriod(-1, 0)
         }
     }
 
     @Test
     fun throwsOnLowerBoundGreaterThanAllowable() {
         Assertions.assertThrows(IllegalArgumentException::class.java) {
-            MonthPeriod(32, 0)
+            WeekPeriod(8, 0)
         }
     }
 
@@ -53,6 +53,6 @@ class MonthPeriodTest {
 
     companion object {
         @JvmStatic
-        fun lowerBoundValues() = IntStream.range(0, 32)
+        fun lowerBoundValues() = IntStream.range(0, 8)
     }
 }
