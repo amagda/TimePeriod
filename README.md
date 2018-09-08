@@ -1,7 +1,16 @@
 # TimePeriod
+[ ![Download](https://api.bintray.com/packages/depoza/util/time-period/images/download.svg) ](https://bintray.com/depoza/util/time-period/_latestVersion)
+ 
 Set of simple classes for working with time periods.
 
 Useful while implementing features with configuring filters or reports for different time periods. For example, transactions filtering of finance trackers or configuring analytics reports.
+
+## How to add
+```java
+dependencies {
+    implementation 'com.depoza.util:time-period:X.Y.Z'
+}
+```
 
 ## Period
 Allowes you to obtain: 
