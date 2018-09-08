@@ -6,7 +6,8 @@ import net.jcip.annotations.Immutable;
  * Period of the time describing interval relative to the current time.
  * Repeatable means that start and end time would be recalculated on {@link #timeBounds()} method call
  * when current time cross the upper bound of this period.
- * <p>For example:
+ * <br>
+ * For example:
  * <ul>
  * <li>We defined period as current week started from monday with {@code new WeekPeriod(1,0)}</li>
  * <li>Today is sunday 20may</li>
@@ -14,14 +15,13 @@ import net.jcip.annotations.Immutable;
  * <li>When it's monday of 21may(cross the upper bound of 20may) then start and end time would be recalculated,
  * so new current week lower bound is 21may and upper is 27may</li>
  * </ul>
- * </p>
  */
 @Immutable
 public abstract class RepeatablePeriod extends BasePeriod {
 
     /**
      * Lower boundary of the period.
-     * <p>
+     * <br>
      * Value depends of the {@link PeriodType}:
      * <ul>
      * <li>For the {@link #DAY_PERIOD} is current day(1)</li>
@@ -31,13 +31,12 @@ public abstract class RepeatablePeriod extends BasePeriod {
      * or {@code 0} if period starts from the current day</li>
      * <li>For the {@link #YEAR_PERIOD} is month of the year in range of 1-12</li>
      * </ul>
-     * </p>
      */
     public final int lowerBound;
 
     /**
      * Total number of the period units.
-     * <p>
+     * <br>
      * Supported range of -N to N:
      * <ul>
      * <li>{@code 0} value means the current period unit.
@@ -47,7 +46,6 @@ public abstract class RepeatablePeriod extends BasePeriod {
      * <li>Positive value means the next period unit in relation to the current.
      * For example value {@code 3} means next 3-d day/week/month/year</li>
      * </ul>
-     * </p>
      */
     public final int quantity;
 

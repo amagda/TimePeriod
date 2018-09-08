@@ -1,0 +1,26 @@
+ext {
+    bintrayOrg = 'depoza'
+    bintrayRepo = 'util'
+    bintrayName = 'time-period'
+
+    developerId = 'depoza'
+    developerName = 'Depoza'
+    developerEmail = 'dev@depoza.com'
+
+    libraryName = 'TimePeriod'
+    libraryDescription = 'Set of simple classes for working with time periods.'
+    libraryGroupId = 'com.depoza.util'
+    libraryArtifact = 'time-period'
+    libraryVersion = '1.0.1'
+
+    urlSite = 'https://github.com/amagda/TimePeriod'
+    urlVcs = 'https://github.com/amagda/TimePeriod.git'
+    urlIssues = 'https://github.com/amagda/TimePeriod/issues'
+
+    licenseName = 'MIT'
+    licenseUrl = 'http://www.opensource.org/licenses/mit-license.php'
+    allLicenses = ["MIT"]
+}
+
+apply from: '../install.gradle'
+apply from: '../bintray.gradle'
