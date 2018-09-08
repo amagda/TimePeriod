@@ -58,9 +58,12 @@ DayPeriod(1)
 
 **WeekPeriod**
 
-Lower bound in range of 1-7(monday-sunday)
+Lower bound in range of 1-7(monday-sunday) or 0 if period starts from the current day
 
 ```kotlin
+// current week, lower bound is current day
+WeekPeriod(0, 0)	
+
 // current week, lower bound is monday
 WeekPeriod(1, 0)	
 
@@ -73,9 +76,12 @@ WeekPeriod(5, 3)
 
 **MonthPeriod**
 
-Lower bound in range of 1-31(day of month)
+Lower bound in range of 1-31(day of month) or 0 if period starts from the current day
 
 ```kotlin
+// current month, lower bound is current day
+MonthPeriod(0, 0)	
+
 // current month, lower bound is 1 day of month
 MonthPeriod(1, 0)	
 
