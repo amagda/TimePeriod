@@ -1,47 +1,47 @@
-package com.depoza.util.timeperiod;
+package com.depoza.util.timeperiod
 
-import java.io.Serializable;
+import java.io.Serializable
 
 /**
  * Period of the time
  */
-public interface Period extends Serializable {
+interface Period : Serializable {
 
     /**
      * Obtains the previous period in relation to this
      *
-     * @return new {@code Period} instance
+     * @return new [Period] instance
      */
-    Period previous();
+    fun previous(): Period
 
     /**
      * Obtains the next period in relation to this
      *
-     * @return new {@code Period} instance
+     * @return new [Period] instance
      */
-    Period next();
+    fun next(): Period
 
     /**
      * Obtains start and end time of this period.
-     * If period is {@link RepeatablePeriod}, then calculation is performed relative to the current time
+     * If period is [RepeatablePeriod], then calculation is performed relative to the current time
      *
      * @return array with specific dates in Unix time format, where 1-t value is start time and 2-d is end time
      */
-    long[] timeBounds();
+    fun timeBounds(): LongArray
 
     /**
-     * Calculator of the {@link Period} start/end time
+     * Calculator of the [Period] start/end time
      *
      * @param <T> Period
      */
     @FunctionalInterface
-    interface TimeBoundsCalculator<T extends Period> {
+    interface TimeBoundsCalculator<T : Period> {
         /**
          * Obtains start and end time of period
          *
          * @param period to calculate start and end time for
          * @return array with specific dates in Unix time format, where 1-t value is start time and 2-d is end time
          */
-        long[] calculateFor(T period);
+        fun calculateFor(period: T): LongArray
     }
 }

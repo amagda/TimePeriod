@@ -16,7 +16,7 @@ import static java.util.Calendar.SECOND;
  * Period of the time repeating every day relative to the current time
  */
 @Immutable
-public final class DayPeriod extends RepeatablePeriod {
+public class DayPeriod extends RepeatablePeriod {
 
     /**
      * Initializes day period

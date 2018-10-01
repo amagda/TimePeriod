@@ -11,7 +11,7 @@ ext {
     libraryDescription = 'Set of simple classes for working with time periods.'
     libraryGroupId = 'com.depoza.util'
     libraryArtifact = 'time-period'
-    libraryVersion = '1.0.3'
+    libraryVersion = '1.0.4'
 
     urlSite = 'https://github.com/amagda/TimePeriod'
     urlVcs = 'https://github.com/amagda/TimePeriod.git'

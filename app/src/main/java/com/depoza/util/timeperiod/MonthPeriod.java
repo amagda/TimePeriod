@@ -19,7 +19,7 @@ import static java.util.Calendar.SECOND;
  * Could be started from any day of the month
  */
 @Immutable
-public final class MonthPeriod extends RepeatablePeriod {
+public class MonthPeriod extends RepeatablePeriod {
 
     /**
      * Initializes month period

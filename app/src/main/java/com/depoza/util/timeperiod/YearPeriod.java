@@ -20,7 +20,7 @@ import static java.util.Calendar.YEAR;
  * Could be started from any month of the year
  */
 @Immutable
-public final class YearPeriod extends RepeatablePeriod {
+public class YearPeriod extends RepeatablePeriod {
 
     /**
      * Initializes year period

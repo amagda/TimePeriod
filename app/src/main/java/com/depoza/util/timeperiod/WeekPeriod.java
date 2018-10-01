@@ -20,7 +20,7 @@ import static java.util.Calendar.SUNDAY;
  * Could be started from any day of the week
  */
 @Immutable
-public final class WeekPeriod extends RepeatablePeriod {
+public class WeekPeriod extends RepeatablePeriod {
 
     /**
      * Initializes week period
