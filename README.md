@@ -54,9 +54,16 @@ For example:
 - When it's monday of 21may(cross the upper bound of 20may) then bounds would be recalculated, so new current week lower bound is 21may and upper is 27may
  
 **DayPeriod**
+##### Predefined classes
+- `TodayPeriod`
+- `YesterdayPeriod`
+
 ```kotlin
 // current day
 DayPeriod(0)
+
+// yesterday
+DayPeriod(-1)
 
 // previous 3-d day
 DayPeriod(-3)
@@ -69,15 +76,20 @@ DayPeriod(1)
 
 Lower bound in range of 1-7(monday-sunday) or 0 if period starts from the current day
 
+##### Predefined classes
+- `CurWeekPeriod`
+- `PrevWeekPeriod`
+- `Last7DayPeriod`
+
 ```kotlin
 // current week, lower bound is current day
 WeekPeriod(0, 0)	
 
 // current week, lower bound is monday
-WeekPeriod(1, 0)	
+WeekPeriod(1, 0)
 
-// previous week, lower bound is wednsday
-WeekPeriod(3, -1)	
+// previous week, lower bound is monday
+WeekPeriod(1, -1)
 
 // next 3-d week, lower bound is friday
 WeekPeriod(5, 3)	
@@ -86,6 +98,11 @@ WeekPeriod(5, 3)
 **MonthPeriod**
 
 Lower bound in range of 1-31(day of month) or 0 if period starts from the current day
+
+##### Predefined classes
+- `CurMonthPeriod`
+- `PrevMonthPeriod`
+- `Last30DayPeriod`
 
 ```kotlin
 // current month, lower bound is current day
@@ -104,6 +121,10 @@ MonthPeriod(31, 1)
 **YearPeriod**
 
 Lower bound in range of 1-12(month of year)
+
+##### Predefined classes
+- `CurYearPeriod`
+- `PrevYearPeriod`
 
 ```kotlin
 // current year, lower bound is january
