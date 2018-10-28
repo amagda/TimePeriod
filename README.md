@@ -54,7 +54,7 @@ For example:
 - When it's monday of 21may(cross the upper bound of 20may) then bounds would be recalculated, so new current week lower bound is 21may and upper is 27may
  
 **DayPeriod**
-##### Predefined classes
+###### Predefined classes
 - `TodayPeriod`
 - `YesterdayPeriod`
 
@@ -76,7 +76,7 @@ DayPeriod(1)
 
 Lower bound in range of 1-7(monday-sunday) or 0 if period starts from the current day
 
-##### Predefined classes
+###### Predefined classes
 - `CurWeekPeriod`
 - `PrevWeekPeriod`
 - `Last7DayPeriod`
@@ -99,7 +99,7 @@ WeekPeriod(5, 3)
 
 Lower bound in range of 1-31(day of month) or 0 if period starts from the current day
 
-##### Predefined classes
+###### Predefined classes
 - `CurMonthPeriod`
 - `PrevMonthPeriod`
 - `Last30DayPeriod`
@@ -122,7 +122,7 @@ MonthPeriod(31, 1)
 
 Lower bound in range of 1-12(month of year)
 
-##### Predefined classes
+###### Predefined classes
 - `CurYearPeriod`
 - `PrevYearPeriod`
 
